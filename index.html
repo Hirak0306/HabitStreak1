@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Habit Goal Tracker</title>
+<link rel="stylesheet" href="style.css">
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1b1b1b">
+
+<!-- iPhone support -->
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+</head>
+<body>
+
+<h2>Habit Goal Tracker</h2>
+
+<div class="input-box">
+    <input id="goalName" placeholder="Enter habit (e.g Read book)">
+    <input id="goalDays" type="number" placeholder="Days">
+    <button class="add-btn" onclick="addGoal()">➕ Add</button>
+</div>
+
+<div id="goalList"></div>
+
+<script src="script.js"></script>
+
+<script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+  
+</body>
+</html>
